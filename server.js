@@ -2,13 +2,14 @@ const express = require("express");
 const bodyParser= require('body-parser');
 const app = express();
 const f = require('./db');
+const port = process.env.PORT || 3000;
 
 function start2() {
 f.base(); // get base
 
-app.listen(3000, () => {
-console.log('listening on 3000')
- });
+app.listen(port, function() {
+	console.log('Our app is running on http://localhost:' + port);
+});
 
 // name db = sova
 app.use(bodyParser.urlencoded({extended: true}));
