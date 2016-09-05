@@ -6,9 +6,9 @@ const f = require('./db');
 function start2() {
 f.base(); // get base
 
-//app.listen(3000, () => {
-//console.log('listening on 3000')
-// });
+app.listen(3000, () => {
+console.log('listening on 3000')
+ });
 
 // name db = sova
 app.use(bodyParser.urlencoded({extended: true}));
