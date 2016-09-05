@@ -17,7 +17,7 @@
 </head>
 <body>
   <h1>May Node and Express be with you. And MongoDB Lab</h1>
-<a class="btn btn-danger" href="../add">+ Add</a>
+<a class="btn btn-danger my-btn" href="../add">+ Add</a>
 <img src="mlab.png">
 
   <table class="table table-bordered">
@@ -37,8 +37,8 @@
 	  <td><%= quotes[i].email %></td>
 	  <td><%= quotes[i].phone %></td>
 	  <td width="120px;">
-	   <a class="btn btn-success" href="../quotes/del/<%= quotes[i].id %>"> Del </a> 
-	      <a class="btn btn-danger" href="../quotes/edit/<%= quotes[i].id %>"> Edit </a>
+	   <a class="btn btn-success my-btn" href="../quotes/del/<%= quotes[i].id %>"> Del </a> 
+	      <a class="btn btn-danger my-btn my-btn-green" href="../quotes/edit/<%= quotes[i].id %>"> Edit </a>
 	  </td>
     </tr>
   <% } %>
