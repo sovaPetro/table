@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <meta charset="UTF-8">
+    <title>MY APP</title>
+	
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+         
+  <style>
+  body {
+  padding:20px;}
+  table, tr, th, td {
+  border:1px solid gray;
+  }
+  td, th {
+  padding: 10px;}
+  </style>
+<body>
+<h1>Edit data of the customer :</h1>
+
+
+  <% quotes %>
+<form  class="form-horizontal col-xs-4" action="/quotes/edit/<%=quotes.id%>" method="post">
+   Id:     <input class="form-control" type="text"  name="id" value="<%=quotes.id%>"><br>
+    Name: <input class="form-control" type="text" name="name" value="<%=quotes.name%>" required><br>
+    Address: <input class="form-control" type="text" name="city"  value="<%=quotes.city%>" required><br>
+    Email: <input class="form-control"  type="text" name="email" value="<%=quotes.email%>"  required><br>
+    Phone: <input  class="form-control"  type="text" name="phone" value="<%=quotes.phone%>"  required><br>
+    <input class="btn btn-danger" type="submit" value="Submit">
+</form>
+    <%  %>
+</body>
+</html>

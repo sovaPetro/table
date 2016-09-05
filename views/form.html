@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+    <meta charset="UTF-8">
+    <title>MY APP</title>
+	
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+         
+  <style>
+  body {
+  padding:20px;}
+  table, tr, th, td {
+  border:1px solid gray;
+  }
+  td, th {
+  padding: 10px;}
+  </style>
+<body>
+<h1>Enter data of a new customer :</h1>
+
+
+
+<form action="/quotes" method="POST" class="form-horizontal col-sm-6">
+Id:     <input class="form-control" type="text" placeholder="id" name="id"><br>
+Name:   <input class="form-control" type="text" placeholder="name" name="name"><br>
+Country:    <input class="form-control" type="text" placeholder="country" name="city"><br>
+Email:	<input class="form-control" type="text" placeholder="email" name="email"><br>
+Phone:	<input class="form-control" type="text" placeholder="phone" name="phone"><br>
+    <button class="btn btn-danger" type="submit">Submit</button>
+  </form>
+</body>
+</html>

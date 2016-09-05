@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MY APP</title>
+   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="maincss.css">         
+  <style>
+  body {
+  padding:20px;}
+  table, tr, th, td {
+  border:1px solid gray;
+  }
+  td, th {
+  padding: 10px;}
+  </style>
+</head>
+<body>
+  <h1>May Node and Express be with you. And MongoDB Lab</h1>
+<a class="btn btn-danger" href="http://localhost:3000/add">+ Add</a>
+<img src="mlab.png">
+
+  <table class="table table-bordered">
+      <tr class="success" >
+	       <th> № </th>
+	       <th>Customer</th>
+		   <th>Country</th>
+		   <th>email</th>
+           <th>phone</th>
+		   <th>Action</th>
+	</tr>
+  <% for(var i=0; i<quotes.length; i++) {%>
+    <tr class="quote">
+	  <td><%= quotes[i].id %></td>
+      <td><%= quotes[i].name %></td>
+      <td><%= quotes[i].city %></td>
+	  <td><%= quotes[i].email %></td>
+	  <td><%= quotes[i].phone %></td>
+	  <td width="120px;">
+	   <a class="btn btn-success" href="http://localhost:3000/quotes/del/<%= quotes[i].id %>"> Del </a> 
+	      <a class="btn btn-danger" href="../quotes/edit/<%= quotes[i].id %>"> Edit </a>
+	  </td>
+    </tr>
+  <% } %>
+  </table>
+  <br>
+  <div class="static-div">
+    <button id="alert" class="my-btn"> Click me </button>
+  
+  </div>
+ <script src="main.js"></script>
+</body>
+</html>
