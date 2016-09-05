@@ -15,7 +15,7 @@
 	background:#34A853;
 }
 .my-btn:hover {
-	box-shadow:0 0 5px white;
+	box-shadow:0 0 2px white;
 }
 
 .my-btn:active {
@@ -26,5 +26,15 @@ img {
 	width:150px;
 }
 a {
-	
+	text-decoration: none;
+	margin:3px;
 }
+
+ body {
+  padding:20px;}
+  table, tr, th, td {
+  border:1px solid gray;
+  border-collapse:collapse;
+  }
+  td, th {
+  padding: 10px;}
