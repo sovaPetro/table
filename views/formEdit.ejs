@@ -10,7 +10,7 @@
 
 
   <% quotes %>
-<form  class="form-horizontal col-xs-4" action="/quotes/edit/<%=quotes.id%>" method="post">
+<form  class="form-horizontal col-sm-6" action="/quotes/edit/<%=quotes.id%>" method="post">
    Id:     <input class="form-control" type="text"  name="id" value="<%=quotes.id%>"><br>
     Name: <input class="form-control" type="text" name="name" value="<%=quotes.name%>" required><br>
     Address: <input class="form-control" type="text" name="city"  value="<%=quotes.city%>" required><br>
