@@ -1,3 +1,15 @@
+ body {
+  padding:20px;
+ 	
+ }
+  table, tr, th, td {
+  border:1px solid gray;
+  border-collapse:collapse;
+  }
+  td, th {
+  padding: 10px;
+  }
+  
 .static-div {
 	min-height:100px;
 	background:#292F33;
@@ -11,9 +23,7 @@
 	font-size:20px;
 	padding:5px;
 }
-.my-btn-green {
-	background:#34A853;
-}
+
 .my-btn:hover {
 	box-shadow:0 0 2px white;
 }
@@ -25,27 +35,4 @@ img {
 	float:right;
 	width:150px;
 }
-a {
-	text-decoration: none;
-	margin:3px;
-}
 
- body {
-  padding:20px;
- 	
- }
-  table, tr, th, td {
-  border:1px solid gray;
-  border-collapse:collapse;
-  }
-  td, th {
-  padding: 10px;
-  }
-  form {
-  	width:50%;
-  	background:lightgray;
-  }
-  input {
-  	width: 30%;
-  	border-radius:0;
-  }
