@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
   <meta charset="UTF-8">
   <title>MY APP</title>
   
     <link rel="stylesheet" href="maincss.css">         
      <link rel="stylesheet" href="bootstrap.css">
+     <script src="angular.min.js"></script>
 </head>
-<body>
+<body ng-controller="myController">
   <h1>May Node and Express be with you. And MongoDB Lab</h1>
 <a class="btn btn-danger" href="../add">+ Add</a>
 <img src="mlab.png">
@@ -38,8 +39,20 @@
   <br>
   <div class="static-div">
     <button id="alert" class="my-btn"> Click me </button>
-  
+   <h3>{{ clock }}</h3>
   </div>
  <script src="main.js"></script>
+ <script>
+ angular.module('myApp', []).controller('myController', 
+function($scope, $timeout) {
+var updateClock = function() {
+	$scope.clock = new Date();
+	$timeout(function() {
+	updateClock();
+	}, 1000);
+};
+updateClock();
+});
+</script>
 </body>
 </html>
