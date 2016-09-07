@@ -39,21 +39,9 @@
   <br>
   <div class="static-div">
     <button id="alert" class="my-btn"> Click me </button>
-   <h3>{{ clock }}</h3>
+   <h3>{{ clock.now }}</h3>
   </div>
  <script src="main.js"></script>
- <script>
- angular.module('myApp', []).controller('myController', 
-function($scope, $timeout) {
-var updateClock = function() {
-	$scope.clock1 = new Date();
-	$scope.clock = $scope.clock1.toLocaleTimeString();
-	$timeout(function() {
-	updateClock();
-	}, 1000);
-};
-updateClock();
-});
-</script>
+ 
 </body>
 </html>
