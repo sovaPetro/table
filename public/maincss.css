@@ -2,6 +2,7 @@
   padding:20px;
  	
  }
+ h3 { color:white; }
   table, tr, th, td {
   border:1px solid gray;
   border-collapse:collapse;
