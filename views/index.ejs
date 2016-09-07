@@ -46,7 +46,8 @@
  angular.module('myApp', []).controller('myController', 
 function($scope, $timeout) {
 var updateClock = function() {
-	$scope.clock = new Date();
+	$scope.clock1 = new Date();
+	$scope.clock = $scope.clock1.toLocaleTimeString();
 	$timeout(function() {
 	updateClock();
 	}, 1000);
