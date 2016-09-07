@@ -1,13 +1,16 @@
-var hello = document.getElementById('alert')
+(()=> {
 
-hello.addEventListener('click', function () {
+
+let hello = document.getElementById('alert')
+
+hello.addEventListener('click', () => {
   alert("Hi! I am alert from static!!");
 });
 
 angular.module('myApp', []).controller('myController', 
 function($scope, $timeout) {
 	$scope.clock = {};
-	var updateClock = function() {
+	let updateClock = () => {
 	    $scope.clock.now = new Date().toLocaleTimeString();
 	    $timeout(function() {
 	    updateClock();
@@ -15,3 +18,7 @@ function($scope, $timeout) {
 };
 updateClock();
 });
+
+
+
+})();
