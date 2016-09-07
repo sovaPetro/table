@@ -3,14 +3,15 @@
     <meta charset="UTF-8">
     <title>MY APP</title>
 	
-        <link rel="stylesheet" href="maincss.css">
+       
          <link rel="stylesheet" href="bootstrap.css">
+		  <link rel="stylesheet" href="maincss.css">
 <body>
 <h1>Edit data of the customer :</h1>
 
 
   <% quotes %>
-<form  class="form-horizontal col-sm-6" action="/quotes/edit/<%=quotes.id%>" method="post">
+<form   action="/quotes/edit/<%=quotes.id%>" method="post" class="form-horizontal col-sm-6">
    Id:     <input class="form-control" type="text"  name="id" value="<%=quotes.id%>"><br>
     Name: <input class="form-control" type="text" name="name" value="<%=quotes.name%>" required><br>
     Address: <input class="form-control" type="text" name="city"  value="<%=quotes.city%>" required><br>
