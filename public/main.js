@@ -1,12 +1,6 @@
 (()=> {
 
 
-let hello = document.getElementById('alert')
-
-hello.addEventListener('click', () => {
-  alert("Hi! I am alert from static!!");
-});
-
 angular.module('myApp', []).controller('myController', 
 function($scope, $timeout) {
 	$scope.clock = {};

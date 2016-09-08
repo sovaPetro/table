@@ -4,6 +4,8 @@
  }
  h3 { 
  	color:#FFFFFF;
+	font-size:30px;
+	text-align:center;
  	}
   table, tr, th, td {
   border:1px solid gray;
@@ -18,22 +20,7 @@
 	background:#292F33;
 	padding:30px;
 }
-.my-btn {
-	border-radius:0;
-	border:none;
-	background:#EA4335;
-	color:white;
-	font-size:20px;
-	padding:5px;
-}
 
-.my-btn:hover {
-	box-shadow:0 0 2px white;
-}
-
-.my-btn:active {
-	background:#EA6355;
-}
 img {
 	float:right;
 	width:150px;
