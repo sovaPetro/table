@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>MY APP</title>
@@ -7,10 +7,24 @@
     <link rel="stylesheet" href="maincss.css">         
      
      <script src="angular.min.js"></script>
+	 
 </head>
-<body ng-controller="myController">
+<body ng-app="myApp">
+
+<div id="firstController" ng-controller="myController">
+<header>
+<div style="height:100px;background:teal;">
+</div>
+  <div class="half">
   <h1>May the Force be with you!</h1>
   <h2>Using: Node js, Express, mLab, Angularjs, Bootstrap</h2>
+  </div>
+  <div class="static-div half">
+   
+   <h3>{{ clock.now }}</h3>
+  </div>
+  </header>
+  <!--- temporary commented
 <a class="btn btn-danger" href="../add">+ Add</a>
 <img src="mlab.png">
 
@@ -36,13 +50,38 @@
 	  </td>
     </tr>
   <% } %>
-  </table>
-  <br>
-  <div class="static-div">
-   
-   <h3>{{ clock.now }}</h3>
+  </table> -->
+  <br> 
+  
+  </div> <!-- end of first controller -->
+  <div ng-controller="TableCtrl">
+    <table class="table table-bordered">
+	    <tr class="success">
+		    <th>#</th>
+			<th>Name <input type="text" ng-model="f.name"></th>
+			<th>Country <input type="text" ng-model="f.address"></th>
+			<th>email <input type="text" ng-model="filteremail"></th>
+			<th>phone <input type="text" ng-model="filterphone"></th>
+		</tr>
+		<tr ng-repeat="w in writers | filter:f
+		| filter:f
+		| filter:filteremail |filter:filterphone">
+		
+		<td>{{w.id }} </td><td>{{w.name}}</td><td>{{w.address}}</td>
+		<td>{{w.email}}</td><td>{{w.phone}}</td>
+		</tr>
+	</table>
+  <hr>
+  <p>Example for phonecat tutorail (8x8 table)</p>
+   <table class="table table-bordered">
+	    <tr  ng-repeat="i in [0,1,2,3,4,5,6,7]" class="success">
+		    <td ng-repeat="j in [0,1,2,3,4,5,6,7]">{{(i+1)*(j+1)}}</td>
+		</tr>
   </div>
+  
  <script src="main.js"></script>
+ <script>
  
+ </script>
 </body>
 </html>
