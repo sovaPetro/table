@@ -2,8 +2,6 @@
 let myApp = angular.module('myApp', []);
 
 
-
-
 myApp.controller('myController', ($scope, $timeout) => {
 	$scope.clock = {};
 	let updateClock = () => {
@@ -25,9 +23,5 @@ myApp.controller('TableCtrl', ($scope) => {
 	{"id":6,"name":"Mark Twain","address":"USA","email":"mark@gmail.com","phone":"3(800)123-45-66"}
 	];
 });
-
-
-
-
 
 })();

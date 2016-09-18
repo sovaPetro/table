@@ -1,17 +1,17 @@
 <!doctype html>
-<html>
+<html  lang="en">
+    <head>
     <meta charset="UTF-8">
     <title>MY APP</title>
-	
-       
          <link rel="stylesheet" href="bootstrap.css">
 		  <link rel="stylesheet" href="maincss.css">
+    </head>
 <body>
 <h1>Edit data of the customer :</h1>
 
 
   <% quotes %>
-<form   action="/quotes/edit/<%=quotes.id%>" method="post" class="form-horizontal col-sm-6">
+<form   class="mytable" action="/quotes/edit/<%=quotes.id%>" method="post">
    Id:     <input class="form-control" type="text"  name="id" value="<%=quotes.id%>"><br>
     Name: <input class="form-control" type="text" name="name" value="<%=quotes.name%>" required><br>
     Address: <input class="form-control" type="text" name="city"  value="<%=quotes.city%>" required><br>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>MY APP</title>
+  <script src="angular.min.js"></script>
+  
+ 
+  <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="maincss.css">   
+<script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+<script src="https://www.amcharts.com/lib/3/pie.js"></script>
+<script src="https://www.amcharts.com/lib/3/plugins/animate/animate.min.js"></script>
+<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+     
+</head>
+<body ng-app="myApp">
+<nav>
+<a class="btn btn-success" href="/"> Main </a>
+	   <a class="btn btn-info" href="/ang"> Angular </a>
+	   <a class="btn btn-info" href="../"> Some link </a>
+	   <a class="btn btn-info" href="../"> Some link </a>
+</nav>
+<hr>
+
+ 
+    <div id="chartdiv"></div>  
+   
+<div ng-controller="TableCtrl">
+    <table class="table table-bordered">
+	    <tr class="success">
+		    <th>#</th>
+			<th>Name <input type="text" ng-model="f.name"></th>
+			<th>Country <input type="text" ng-model="f.address"></th>
+			<th>email <input type="text" ng-model="filteremail"></th>
+			<th>phone <input type="text" ng-model="filterphone"></th>
+		</tr>
+		<tr ng-repeat="w in writers | filter:f
+		| filter:f
+		| filter:filteremail |filter:filterphone">
+		
+		<td>{{w.id }} </td><td>{{w.name}}</td><td>{{w.address}}</td>
+		<td>{{w.email}}</td><td>{{w.phone}}</td>
+		</tr>
+	</table>
+ 
+</div>
+<script src="main.js"></script>
+ <script src="datachart.js"></script>
+ </body>
+ 
+ 
+
+</html>

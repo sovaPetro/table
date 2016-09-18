@@ -12,19 +12,28 @@
 <body ng-app="myApp">
 
 <div id="firstController" ng-controller="myController">
-<header>
-<div style="height:100px;background:teal;">
-</div>
-  <div class="half">
+<nav style="height:50px;boder:1px solid teal;width:100%;">
+       <a class="btn btn-success" href="/"> Main </a>
+	   <a class="btn btn-info" href="/ang"> Angular </a>
+	   <a class="btn btn-info" href="../"> Some link </a>
+	   <a class="btn btn-info" href="../"> Some link </a>
+</nav>
+   <header>
+  <div class="half-70">
   <h1>May the Force be with you!</h1>
-  <h2>Using: Node js, Express, mLab, Angularjs, Bootstrap</h2>
+  <h4>You are on the main page of this application.
+  Here you can see mane different and common parts of project. 
+At present it could not be called the project. Now it only my 
+trainning room-server.  </h4>
+<h4>You can refer to another part of this project by clicking on the nav section.</h4>
+<h4>There might be buttons for MongoDB, AngularJS, Node, Animations and Contatcs.</h4>
   </div>
-  <div class="static-div half">
+  <div class="static-div half-30">
    
    <h3>{{ clock.now }}</h3>
   </div>
   </header>
-  <!--- temporary commented
+  
 <a class="btn btn-danger" href="../add">+ Add</a>
 <img src="mlab.png">
 
@@ -50,36 +59,13 @@
 	  </td>
     </tr>
   <% } %>
-  </table> -->
+  </table>
   <br> 
   
-  </div> <!-- end of first controller -->
-  <div ng-controller="TableCtrl">
-    <table class="table table-bordered">
-	    <tr class="success">
-		    <th>#</th>
-			<th>Name <input type="text" ng-model="f.name"></th>
-			<th>Country <input type="text" ng-model="f.address"></th>
-			<th>email <input type="text" ng-model="filteremail"></th>
-			<th>phone <input type="text" ng-model="filterphone"></th>
-		</tr>
-		<tr ng-repeat="w in writers | filter:f
-		| filter:f
-		| filter:filteremail |filter:filterphone">
-		
-		<td>{{w.id }} </td><td>{{w.name}}</td><td>{{w.address}}</td>
-		<td>{{w.email}}</td><td>{{w.phone}}</td>
-		</tr>
-	</table>
-  <hr>
-  <p>Example for phonecat tutorail (8x8 table)</p>
-   <table class="table table-bordered">
-	    <tr  ng-repeat="i in [0,1,2,3,4,5,6,7]" class="success">
-		    <td ng-repeat="j in [0,1,2,3,4,5,6,7]">{{(i+1)*(j+1)}}</td>
-		</tr>
-  </div>
+  </div> 
   
- <script src="main.js"></script>
+  
+  <script src="main.js"></script>
  <script>
  
  </script>
